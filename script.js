@@ -9,18 +9,24 @@ function criarItem(event) {
 
         input.value.trim()
 
+        alerta('', 'none')
+
         if (input.value === '') {
-            alert('Insira um item.') 
+            // alert('Insira um item.') 
+            alerta('Escreva alguma coisa.', 'block')
             return
 
         }
 
         if (itens.children.length >= 15) {
-            alert('Voce so pode add ate 15 itens na sua lista!')
+            // alert('Voce so pode add ate 15 itens na sua lista!')
+            alerta('Você só pode add até 15 itens na sua lista.', 'block')
             return
         }
 
-        boxInput.innerHTML = 
+
+
+        boxInput.innerHTML =
             `<input type="checkbox" id="caixinha">
             <label for="caixinha">${input.value}</label>`
 
@@ -28,9 +34,15 @@ function criarItem(event) {
 
         input.value = ""
 
-    
+
 
     }
 }
 
 document.addEventListener("keypress", criarItem)
+
+function alerta(texto, display) {
+    var alertaDiv = document.querySelector(".alerta")
+    alertaDiv.innerHTML = texto 
+    alertaDiv.style.display = display
+}

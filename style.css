@@ -45,7 +45,21 @@
     border-radius: 8px;
     box-shadow:  1PX 1PX #f5efeb9f;
     margin-bottom: 5px;
+    color: #ffffff;
     
 }
 
+.itens .box-input:nth-child(2n+1) {
+    background-color: #346379;
 
+}
+
+.alerta {
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #113749;
+    color: #ffffff;
+    display: none;
+}
