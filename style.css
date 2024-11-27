@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
 
 .itens input:checked ~ label {
@@ -13,26 +16,35 @@
     width: 500px;
     margin: 0 auto;
     padding: 10px;
-    background-color: aqua;
+    margin-top: 20px;
+    background-color: #C8D9E6;
+    box-shadow: 2px 2px  #567c8db9;
+    border-radius: 8px;
+    outline: 0;
     
 }
 
 .campos {
     margin-bottom: 20px;
+    background-color: #f5efeb9f;
 }
 
 .campos input {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #a1a1a1;
+    border: 1px solid #567C8D;
+    border-radius: 5px;
     outline: 0;
 }
 
 .itens .box-input {
     width: 100%;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color:#567C8D;
+    border-radius: 8px;
+    box-shadow:  1PX 1PX #f5efeb9f;
+    margin: 2px;
     
 }
 

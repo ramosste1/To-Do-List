@@ -7,6 +7,19 @@ function criarItem(event) {
         var boxInput = document.createElement("div")
         boxInput.classList.add("box-input")
 
+        input.value.trim()
+
+        if (input.value === '') {
+            alert('Insira um item.') 
+            return
+
+        }
+
+        if (itens.children.length >= 15) {
+            alert('Voce so pode add ate 15 itens na sua lista!')
+            return
+        }
+
         boxInput.innerHTML = 
             `<input type="checkbox" id="caixinha">
             <label for="caixinha">${input.value}</label>`
@@ -14,6 +27,9 @@ function criarItem(event) {
         itens.appendChild(boxInput)
 
         input.value = ""
+
+    
+
     }
 }
 
