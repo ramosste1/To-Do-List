@@ -1,3 +1,5 @@
+var selecionarItem = null
+
 function criarItem(event) {
     console.log(event)
     var input = document.querySelector(".campos input")
@@ -40,6 +42,26 @@ function criarItem(event) {
 }
 
 document.addEventListener("keypress", criarItem)
+
+document.querySelector(".itens").addEventListener("click", (event) => {
+    var itemClicado = event.target.closest(".box-input")
+    if (itemClicado) {
+        if (selecionarItem) {
+
+            selecionarItem.classList.remove("selecionado")
+        }
+
+        selecionarItem = itemClicado
+        selecionarItem.classList.add("selecionado")
+    }
+})
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Backspace" && selecionarItem) {
+        selecionarItem.remove()
+        selecionarItem = null
+    }
+})
 
 function alerta(texto, display) {
     var alertaDiv = document.querySelector(".alerta")

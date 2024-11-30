@@ -63,3 +63,9 @@
     color: #ffffff;
     display: none;
 }
+
+.box-input.selecionado {
+    background-color: #7495a5;;
+    border: 2px solid #0ca9f1;;
+    
+}
