@@ -1,4 +1,5 @@
 var selecionarItem = null
+var contador = 0
 
 function criarItem(event) {
     console.log(event)
@@ -29,13 +30,14 @@ function criarItem(event) {
 
 
         boxInput.innerHTML =
-            `<input type="checkbox" id="caixinha">
-            <label for="caixinha">${input.value}</label>`
+            `<input type="checkbox" id="caixinha${contador}">
+            <label for="caixinha${contador}">${input.value}</label>`
 
         itens.appendChild(boxInput)
 
         input.value = ""
 
+        contador += 1
 
 
     }
@@ -65,6 +67,6 @@ document.addEventListener("keydown", (event) => {
 
 function alerta(texto, display) {
     var alertaDiv = document.querySelector(".alerta")
-    alertaDiv.innerHTML = texto 
+    alertaDiv.innerHTML = texto
     alertaDiv.style.display = display
 }
